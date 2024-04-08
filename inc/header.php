@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoneyFive TESTE</title>
+    <title>MoneyFive TESTE V1.2.0</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Ajuste o caminho conforme necessário -->
 </head>
 <body>
