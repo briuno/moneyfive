@@ -9,21 +9,29 @@ $erro = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Hash da senha para segurança
+    $senha = $_POST['senha'];
+    $confirmacaoSenha = $_POST['confirmacaoSenha'];
     $telefone = $_POST['telefone'];
 
-    // Verificar se o e-mail já existe no banco de dados
-    $sql = "SELECT id_usuario FROM Usuarios WHERE email = :email";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(['email' => $email]);
-    if ($stmt->rowCount() > 0) {
-        $erro = "E-mail já cadastrado.";
+    if ($senha !== $confirmacaoSenha) {
+        $erro = "As senhas não coincidem.";
     } else {
-        // Inserir novo usuário no banco de dados
-        $sql = "INSERT INTO Usuarios (nome, email, senha, telefone) VALUES (:nome, :email, :senha, :telefone)";
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT); // Hash da senha para segurança
+
+        // Verificar se o e-mail já existe no banco de dados
+        $sql = "SELECT id_usuario FROM Usuarios WHERE email = :email";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(['nome' => $nome, 'email' => $email, 'senha' => $senha, 'telefone' => $telefone]);
-        header("Location: login.php"); // Redirecionar para a página de login
+        $stmt->execute(['email' => $email]);
+        if ($stmt->rowCount() > 0) {
+            $erro = "E-mail já cadastrado.";
+        } else {
+            // Inserir novo usuário no banco de dados
+            $sql = "INSERT INTO Usuarios (nome, email, senha, telefone) VALUES (:nome, :email, :senha, :telefone)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['nome' => $nome, 'email' => $email, 'senha' => $senhaHash, 'telefone' => $telefone]);
+            header("Location: login.php"); // Redirecionar para a página de login
+            exit; // Encerrar a execução do script após o redirecionamento
+        }
     }
 }
 ?>
@@ -40,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Nome: <input type="text" name="nome" required><br>
         E-mail: <input type="email" name="email" required><br>
         Senha: <input type="password" name="senha" required><br>
+        Confirme a Senha: <input type="password" name="confirmacaoSenha" required><br>
         Telefone: <input type="text" name="telefone"><br>
         <input type="submit" value="Cadastrar">
     </form>
