@@ -1,4 +1,4 @@
-<?php include('inc/header.php');include('auth_check.php'); ?>
+<?php include('inc/header.php');?>
 <div>
     <h2>Política de Privacidade</h2>
     <p>Esta política de privacidade explica como utilizamos as informações pessoais coletadas em nosso site. Por favor, leia esta política de privacidade antes de usar o site ou submeter qualquer informação pessoal.</p>

@@ -1,4 +1,4 @@
-<?php include('inc/header.php');include('auth_check.php'); ?>
+<?php include('inc/header.php');?>
 <div>
     <h2>Termos de Uso</h2>
     <p>Estes termos de uso regulam o uso deste site. Ao acessá-lo, você concorda com estes termos. Se você não concorda com eles, não use o site.</p>

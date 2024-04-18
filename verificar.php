@@ -1,6 +1,6 @@
 <?php
 // Inclua o arquivo de configuração
-include('config.php')include('auth_check.php');;
+include('config.php');
 
 // Variável para armazenar possíveis mensagens de erro
 $erro = '';
