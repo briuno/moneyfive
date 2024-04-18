@@ -1,4 +1,5 @@
 <?php
+include('auth_check.php');
 include('../config.php');
 session_start();
 

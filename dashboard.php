@@ -1,5 +1,6 @@
 <?php
 include('config.php');
+include('auth_check.php');
 session_start();
 
 // Verificar se o usuário está logado

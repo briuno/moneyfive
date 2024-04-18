@@ -1,5 +1,6 @@
 <?php
 include('config.php');
+include('auth_check.php');
 
 // Variável para armazenar possíveis mensagens de erro ou sucesso
 $mensagem = '';

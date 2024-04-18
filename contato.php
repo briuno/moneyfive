@@ -1,4 +1,4 @@
-<?php include('inc/header.php'); ?>
+<?php include('inc/header.php'); include('auth_check.php');?>
 <!-- Conteúdo da página de contato aqui -->
 <h2>Contato</h2>
 <p>Tem perguntas ou precisa de ajuda? Entre em contato conosco.</p>
