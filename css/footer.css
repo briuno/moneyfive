@@ -1,0 +1,18 @@
+footer {
+  background-color: #006CA9;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: .5rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer__link {
+  text-decoration: underline;
+  color: white;
+}

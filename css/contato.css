@@ -1,0 +1,76 @@
+body {
+  color: #464646;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #006CA950;
+  width: 500px;
+  border-radius: 8px;
+  height: 500px;
+}
+
+.wrapper__title > .title {
+  font-size: 2em;
+  color: black;
+}
+
+.wrapper__title > .subtitle {
+  font-weight: 600;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 80%;
+  padding: 1rem;
+}
+
+.wrapper__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: .8rem;
+  border-radius: 6px;
+  border:1px solid transparent;
+  outline: none;
+  font-weight: 600;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #006CA9;
+}
+
+
+.wrapper__input > label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contact_button {
+  width: 100%;
+  cursor: pointer;
+  background-color: #006CA9;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: .7rem;
+}

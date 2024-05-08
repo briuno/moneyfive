@@ -34,18 +34,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- HTML para o formulário de login -->
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Login</title>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
 </head>
+
 <body>
-    <h2>Login</h2>
-    <form method="post">
-        E-mail: <input type="email" name="email" required><br>
-        Senha: <input type="password" name="senha" required><br>
-        <input type="submit" value="Entrar">
-    </form>
-    <?php if ($erro): ?>
-        <p><?php echo $erro; ?></p>
-    <?php endif; ?>
+  <article class="container">
+    <div class="wrapper">
+      <div class="wrapper__title">
+        <img src="assets/logo.svg" alt="logo">
+        <h2 class="title">Login</h2>
+        <p class="subtitle">Por favor entre com suas credenciais</p>
+      </div>
+      <form method="post" class="login__form">
+        <div class="wrapper__input">
+          <label for="email">Email</label>
+          <input type="email" name="email" required placeholder="Coloque seu email" />
+        </div>
+        <div class="wrapper__input">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" required placeholder="Coloque sua senha" />
+        </div>
+        <input class="button" type="submit" value="Entrar">
+      </form>
+      <p class="register">Ainda não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+    </div>
+    <div class="wrapper__image">
+        <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
+        <img class="dash__image" src="assets/home-dash.png" alt="home-dash">
+    </div>
+  </article>
+  <?php if ($erro): ?>
+  <p><?php echo $erro; ?></p>
+  <?php endif; ?>
 </body>
+
 </html>
