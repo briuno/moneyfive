@@ -37,6 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
   <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
 </head>
@@ -45,9 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <article class="container">
     <div class="wrapper">
       <div class="wrapper__title">
-        <img src="assets/logo.svg" alt="logo">
-        <h2 class="title">Login</h2>
-        <p class="subtitle">Por favor entre com suas credenciais</p>
+        <a href="index.php"><img src="assets/logo.svg" alt="logo"></a>
+        <div class="text__wrapper">
+          <h2 class="title">Login</h2>
+          <p class="subtitle">Por favor entre com suas credenciais</p>
+        </div>
       </div>
       <form method="post" class="login__form">
         <div class="wrapper__input">
@@ -63,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <p class="register">Ainda não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
     </div>
     <div class="wrapper__image">
-        <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
-        <img class="dash__image" src="assets/home-dash.png" alt="home-dash">
+      <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
+      <img class="dash__image" src="assets/home-dash.png" alt="home-dash">
     </div>
   </article>
   <?php if ($erro): ?>

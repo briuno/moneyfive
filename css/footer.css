@@ -6,10 +6,7 @@ footer {
   align-items: center;
   flex-direction: column;
   gap: 5px;
-  padding: .5rem;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  padding: 1rem;
 }
 
 .footer__link {

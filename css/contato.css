@@ -9,7 +9,7 @@ body {
   align-items: center;
   width: 100%;
   gap: 1rem;
-  padding: 2rem 0;
+  flex: 1 1 0;
 }
 
 .contact__wrapper {
@@ -21,16 +21,17 @@ body {
   background-color: #006CA950;
   width: 500px;
   border-radius: 8px;
-  height: 500px;
+  height: 600px;
 }
 
 .wrapper__title > .title {
-  font-size: 2em;
-  color: black;
+  font-size: 3em;
+  color: #006CA9;
 }
 
 .wrapper__title > .subtitle {
   font-weight: 600;
+  text-align: center;
 }
 
 .login__form {
@@ -50,13 +51,22 @@ body {
 input {
   padding: .8rem;
   border-radius: 6px;
-  border:1px solid transparent;
+  border: 2px solid transparent;
   outline: none;
   font-weight: 600;
 }
 
+textarea {
+  resize: none;
+  height: 140px;
+  padding: .3rem;
+  font-size: 14px;
+  outline: none;
+  border-radius: 6px;
+}
+
 input:focus, textarea:focus {
-  border: 1px solid #006CA9;
+  border: 2px solid #006CA9;
 }
 
 
@@ -73,4 +83,8 @@ input:focus, textarea:focus {
   font-weight: bold;
   border: none;
   padding: .7rem;
+}
+
+.contact_button:hover {
+  background-color: #0398e2;
 }

@@ -1,18 +1,20 @@
-<?php include('inc/header.php'); ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/contato.css" media="screen" />
+  <title>Contato</title>
 </head>
 
 <body>
+  <?php include('inc/header.php'); ?>
   <article class="contact__container">
-      <div class="wrapper__title">
-        <h2 class="title">Contato</h2>
-        <p class="subtitle">Entre em contato e tenha soluções lucrativas</p>
-      </div>
+    <div class="wrapper__title">
+      <h2 class="title">Faça parte do nosso time</h2>
+      <p class="subtitle">Entre em contato e receba soluções lucrativas</p>
+    </div>
     <div class="contact__wrapper">
       <form action="enviar_contato.php" method="post" class="login__form">
         <div class="wrapper__input">
@@ -31,7 +33,6 @@
       </form>
     </div>
   </article>
+  <?php include('inc/footer.php'); ?>
 </body>
-
 </html>
-<?php include('inc/footer.php'); ?>

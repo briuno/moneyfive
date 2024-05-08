@@ -53,7 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
   <title>Cadastro</title>
 </head>
@@ -62,12 +64,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <article class="container">
     <div class="wrapper">
       <div class="wrapper__title">
-        <img src="assets/logo.svg" alt="logo">
-        <h2 class="title">Cadastro</h2>
-        <p class="subtitle">Preencha para obter acesso a plataforma</p>
+        <a href="index.php"><img src="assets/logo.svg" alt="logo"></a>
+        <div class="text__wrapper">
+          <h2 class="title">Cadastro</h2>
+          <p class="subtitle">Preencha para obter acesso a plataforma</p>
+        </div>
       </div>
       <form method="post" class="login__form">
-      <div class="wrapper__input">
+        <div class="wrapper__input">
           <label for="nome">Nome</label>
           <input type="text" name="nome" required placeholder="Coloque seu nome" />
         </div>
@@ -91,8 +95,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
     </div>
     <div class="wrapper__image">
-        <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
-        <img class="dash__image" src="assets/home-dash.png" alt="home-dash">
+      <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
+      <img class="dash__image" src="assets/home-dash.png" alt="home-dash">
     </div>
   </article>
   <?php if ($erro): ?>

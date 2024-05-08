@@ -3,15 +3,17 @@
 <html>
 
 <head>
-  <title>Login</title>
+  <title>FAQ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/faq.css" media="screen" />
 </head>
 
 <body>
   <article class="faq__container">
     <div class="wrapper__title">
-      <h2 class="title">FAQ</h2>
-      <p class="subtitle">Algumas perguntas que vocês nos fazem</p>
+      <h2 class="title">Perguntas feitas frequentemente</h2>
+      <p class="subtitle">Algumas nem tanto</p>
     </div>
     <details>
       <summary>I can change this too.</summary>

@@ -1,17 +1,16 @@
 .terms__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   width: 65%;
   margin: 0 auto;
-  padding: 2rem 0;
+  flex: 1 1 0;
 }
 
 .title {
-  font-size: 2em;
-  color: black;
+  font-size: 3em;
+  color: #006CA9;
 }
 
 .subtitle {

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -21,16 +27,31 @@ body {
   width: 50%;
 }
 
-.wrapper__title > .title {
+.wrapper__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.text__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper__title > .text__wrapper > .title {
   font-size: 2em;
   color: black;
 }
 
-.wrapper__title > .subtitle {
+
+.wrapper__title > .text__wrapper > .subtitle {
   font-weight: 600;
 }
 
-.wrapper__title > img{
+.wrapper__title > a > img{
   width: auto;
   height: 100px;
 }
@@ -49,9 +70,9 @@ body {
 
 input {
   width: 70%;
-  padding: .5rem;
+  padding: .8rem;
   border-radius: 6px;
-  border:1px solid #d1d1d1;
+  border: 1px solid #d1d1d1;
   outline: none;
   font-weight: 600;
 }
@@ -76,6 +97,10 @@ input:focus {
   padding: .7rem;
 }
 
+.button:hover {
+  background-color: #0398e2;
+}
+
 .register {
   font-weight: 600;
   font-size: 14px;
@@ -90,7 +115,7 @@ input:focus {
 .wrapper__image {
   display: flex;
   flex-direction: column;
-  background-color: #e4e2e2;
+  background-color: #006CA930;
   height: 100%;
   display: flex;
   justify-content: center;
