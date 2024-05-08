@@ -1,0 +1,73 @@
+.main__container {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0;
+}
+
+.main__wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.text__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 70%;
+}
+
+.text__wrapper > .title {
+  font-size: 3em;
+  color: black;
+}
+
+.text__wrapper > .title > span {
+  color: #006CA9;
+}
+
+.text__wrapper > .title > span > .copy {
+  font-size: .5em;
+  position: absolute;
+}
+
+.text__wrapper > .subtitle {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.text__wrapper > .text {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.wrapper__buttons {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+
+.wrapper__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #006CA930;
+  width: 40%;
+  gap: 2rem;
+}
+
+.main__image {
+  height: 400px;
+}
+.text__image {
+  font-size: 18px;
+  font-weight: 600;
+  color: #006CA9;
+}
