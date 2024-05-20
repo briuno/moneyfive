@@ -2,23 +2,39 @@
 include('auth_check.php');
 include('../config.php');
 session_start();
+?>
 
 // Verifique se o usuário está logado e se é um administrador
 // Esta verificação dependerá da sua implementação específica de controle de acesso
 
-include('../inc/header.php');
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Painel Administrativo</h2>
-<p>Bem-vindo ao painel administrativo do MoneyFive.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
+  <title>Admin</title>
+</head>
 
-<div>
-    <h3>Operações</h3>
-    <ul>
-        <li><a href="gerenciar_usuarios.php">Gerenciar Usuários</a></li>
-        <li><a href="gerenciar_solicitacoes.php">Gerenciar Solicitações de Consultoria</a></li>
-        <li><a href="gerenciar_newsletter.php">Gerenciar Assinaturas da Newsletter</a></li>
-    </ul>
-</div>
+<body>
+  <?php include('../inc/adminHeader.php');?>
+  <article class="admin__container">
+    <div class="wrapper__title">
+      <h2 class="title">Painel Administrativo</h2>
+      <p class="subtitle">Bem-vindo ao painel administrativo.</p>
+    </div>
 
-<?php include('../inc/footer.php'); ?>
+    <div class="admin__wrapper">
+      <h1 class="">Operações</h1>
+      <div class="buttons__wrapper">
+        <a class="button" href="gerenciar_usuarios.php">Gerenciar Usuários</a>
+        <a class="button" href="gerenciar_solicitacoes.php">Gerenciar Solicitações de Consultoria</a>
+        <a class="button" href="gerenciar_newsletter.php">Gerenciar Assinaturas da Newsletter</a>
+      </div>
+    </div>
+  </article>
+  <?php include('../inc/adminFooter.php'); ?>
+</body>
+
+</html>

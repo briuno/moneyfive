@@ -16,16 +16,27 @@ $sql = "SELECT nome, email FROM Usuarios WHERE id_usuario = :id_usuario";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['id_usuario' => $id_usuario]);
 $usuario = $stmt->fetch();
-
-include('inc/header.php');
 ?>
 
-<h2>Dashboard</h2>
-<p>Bem-vindo, <?php echo htmlspecialchars($usuario['nome']); ?>!</p>
-<ul>
-    <li><a href="solicitar_consultoria.php">Solicitar Consultoria</a></li>
-    <li><a href="perfil.php">Editar Perfil</a></li>
-    <li><a href="logout.php">Logout</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/dashboards.css" media="screen" />
+    <title>Dashboards</title>
+</head>
+<body>
+    <?php include('inc/header.php');?>
+    <article class="dash__container">
+        <div class="wrapper__title">
+        <h2 class="title">Dashboards</h2>
+        <p class="subtitle">Bem-vindo de volta, <span><?php echo htmlspecialchars($usuario['nome']); ?>!</span></p>
+        </div>
 
-<?php include('inc/footer.php'); ?>
+        <div class="dash__wrapper">
+        </div>
+    </article>
+    <?php include('inc/footer.php'); ?>
+    </body>
+</html>

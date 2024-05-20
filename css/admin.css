@@ -1,0 +1,95 @@
+.admin__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 65%;
+  margin: 0 auto;
+  flex: 1 1 0;
+}
+
+.title {
+  font-size: 3em;
+  color: #006CA9;
+}
+
+.wrapper__title > .subtitle {
+  font-weight: 600;
+  text-align: center;
+}
+
+.admin__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttons__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.table__wrapper {
+  margin-top: 10px;
+}
+
+.table__wrapper > td {
+  padding-top: .5rem;
+}
+
+.table__wrapper:nth-child(odd) {
+  background-color: #006CA930;
+
+}
+
+.table {
+  width: 100%;
+}
+
+.name {
+  font-size: 18px;
+}
+
+.row {
+  text-align: center;
+}
+
+.id {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.table__buttons {
+  padding: 10px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.edit {
+  background-color: #006CA9;
+}
+
+.edit:hover {
+  background-color: #0398e2;
+}
+
+.remove {
+  background-color: #ef233c;
+}
+
+.remove:hover {
+  background-color: #ff4d6d;
+}

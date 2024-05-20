@@ -20,16 +20,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute(['id_usuario' => $id_usuario, 'descricao' => $descricao]);
 
     echo "<p>Sua solicitação foi enviada com sucesso!</p>";
-}
+}?>
 
-include('inc/header.php');
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Solicitar Consultoria</h2>
-<form method="post">
-    Descreva sua necessidade:<br>
-    <textarea name="descricao" required></textarea><br>
-    <input type="submit" value="Enviar Solicitação">
-</form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/consultoria.css" media="screen" />
+  <title>Solicitar Consultoria</title>
+</head>
 
-<?php include('inc/footer.php'); ?>
+<body>
+  <?php include('inc/header.php'); ?>
+  <article class="contact__container">
+    <div class="wrapper__title">
+      <h2 class="title">Solicitar Consultoria</h2>
+      <p class="subtitle">Diga-nos oque precisa e faremos uma consultoria especializada</p>
+    </div>
+    <div class="contact__wrapper">
+      <form action="enviar_contato.php" method="post" class="login__form">
+        <div class="wrapper__input">
+          <label for="message">Mensagem</label>
+          <textarea name="descricao" required></textarea><br>
+        </div>
+        <input class="contact_button" type="submit" value="Enviar Solicitação">
+      </form>
+    </div>
+  </article>
+  <?php include('inc/footer.php'); ?>
+</body>
+
+</html>

@@ -29,16 +29,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Erro ao atualizar o usuário.</p>";
     }
 }
-
-include('../inc/header.php');
 ?>
-
-<h2>Editar Usuário</h2>
-<form method="post">
-    Nome: <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required><br>
-    E-mail: <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required><br>
-    Telefone: <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>"><br>
-    <input type="submit" value="Salvar Alterações">
-</form>
-
-<?php include('../inc/footer.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/adminForms.css" media="screen" />
+    <title>Editar Usuario</title>
+</head>
+<body>
+<?php include('../inc/adminHeader.php');?>
+<article class="admin__container">
+    <h2 class="title">Editar Usuário</h2>
+    <div class="admin__wrapper">
+      <form method="post" class="login__form">
+        <div class="wrapper__input">
+          <label for="name">Nome</label>
+          <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
+        </div>
+        <div class="wrapper__input">
+          <label for="email">Email</label>
+          <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
+        </div>
+        <div class="wrapper__input">
+          <label for="email">Telefone</label>
+          <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>">
+        </div>
+        <input class="admin__button" type="submit" value="Salvar Alterações">
+      </form>
+    </div>
+  </article>
+<?php include('../inc/adminFooter.php'); ?>
+</body>
+</html>

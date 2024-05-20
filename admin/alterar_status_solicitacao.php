@@ -27,19 +27,34 @@ $sql = "SELECT status FROM SolicitacoesConsultoria WHERE id_solicitacao = :id_so
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['id_solicitacao' => $id_solicitacao]);
 $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
-
-include('../inc/header.php');
 ?>
 
-<h2>Alterar Status da Solicitação</h2>
-<form method="post">
-    <label for="status">Status:</label>
-    <select name="status" id="status">
-        <option value="pendente" <?php echo $solicitacao['status'] == 'pendente' ? 'selected' : ''; ?>>Pendente</option>
-        <option value="em progresso" <?php echo $solicitacao['status'] == 'em progresso' ? 'selected' : ''; ?>>Em progresso</option>
-        <option value="concluido" <?php echo $solicitacao['status'] == 'concluido' ? 'selected' : ''; ?>>Concluído</option>
-    </select>
-    <input type="submit" value="Atualizar Status">
-</form>
-
-<?php include('../inc/footer.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/adminForms.css" media="screen" />
+    <title>Alterar Solicitações</title>
+</head>
+<body>
+<?php include('../inc/adminHeader.php');?>
+<article class="admin__container">
+    <h2 class="title">Alterar Status da Solicitação</h2>
+    <div class="admin__wrapper">
+      <form method="post" class="login__form">
+        <div class="wrapper__input">
+            <label for="status">Status:</label>
+            <select name="status" id="status">
+                <option value="pendente" <?php echo $solicitacao['status'] == 'pendente' ? 'selected' : ''; ?>>Pendente</option>
+                <option value="em progresso" <?php echo $solicitacao['status'] == 'em progresso' ? 'selected' : ''; ?>>Em progresso</option>
+                <option value="concluido" <?php echo $solicitacao['status'] == 'concluido' ? 'selected' : ''; ?>>Concluído</option>
+            </select>
+        </div>
+        <input class="admin__button" type="submit" value="Atualizar Status">
+      </form>
+    </div>
+  </article>
+<?php include('../inc/adminFooter.php'); ?>
+</body>
+</html>

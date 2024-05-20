@@ -29,17 +29,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $sql = "SELECT nome, email, telefone FROM Usuarios WHERE id_usuario = :id_usuario";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['id_usuario' => $id_usuario]);
-$usuario = $stmt->fetch();
+$usuario = $stmt->fetch();?>
 
-include('inc/header.php');
-?>
 
-<h2>Editar Perfil</h2>
-<form method="post">
-    Nome: <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required><br>
-    E-mail: <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required><br>
-    Telefone: <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>"><br>
-    <input type="submit" value="Atualizar Perfil">
-</form>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/contato.css" media="screen" />
+    <title>Perfil</title>
+</head>
+<body>
+<?php include('inc/header.php'); ?>
+<article class="contact__container">
+    <div class="wrapper__title">
+      <h2 class="title">Editar Perfil</h2>
+    </div>
+    <div class="contact__wrapper">
+      <form action="enviar_contato.php" method="post" class="login__form">
+        <div class="wrapper__input">
+          <label for="name">Nome</label>
+          <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
+        </div>
+        <div class="wrapper__input">
+          <label for="email">Email</label>
+          <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
+        </div>
+        <div class="wrapper__input">
+          <label for="telefone">Telefone</label>
+          <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>">
+        </div>
+        <input class="contact_button" type="submit" value="Atualizar Perfil">
+      </form>
+    </div>
+  </article>
 <?php include('inc/footer.php'); ?>
+</body>
+</html>

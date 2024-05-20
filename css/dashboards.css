@@ -1,0 +1,39 @@
+.dash__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 65%;
+  margin: 0 auto;
+  flex: 1 1 0;
+}
+
+.title {
+  font-size: 3em;
+  color: #006CA9;
+}
+
+.wrapper__title > .subtitle {
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper__title > .subtitle > span {
+  color: #006CA9;
+  font-weight: bold;
+}
+
+.dash__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttons__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
