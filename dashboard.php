@@ -19,24 +19,27 @@ $usuario = $stmt->fetch();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/dashboards.css" media="screen" />
-    <title>Dashboards</title>
-</head>
-<body>
-    <?php include('inc/header.php');?>
-    <article class="dash__container">
-        <div class="wrapper__title">
-        <h2 class="title">Dashboards</h2>
-        <p class="subtitle">Bem-vindo de volta, <span><?php echo htmlspecialchars($usuario['nome']); ?>!</span></p>
-        </div>
+<html lang="pt-br">
 
-        <div class="dash__wrapper">
-        </div>
-    </article>
-    <?php include('inc/footer.php'); ?>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/dashboards.css" media="screen" />
+  <title>Dashboards</title>
+</head>
+
+<body>
+  <?php include('inc/header.php');?>
+  <main class="dash__container">
+    <section class="wrapper__title">
+      <h2 class="title">Dashboards</h2>
+      <p class="subtitle">Bem-vindo de volta, <span><?php echo htmlspecialchars($usuario['nome']); ?>!</span></p>
+    </section>
+
+    <section class="dash__wrapper">
+    </section>
+  </main>
+  <?php include('inc/footer.php'); ?>
+</body>
+
 </html>

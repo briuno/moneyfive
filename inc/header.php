@@ -11,9 +11,9 @@
 <body>
   <?php session_start(); ?>
   <header class="container">
-    <nav class="wrapper">
+    <nav class="wrapper" aria-label="Menu Principal">
       <a class="image" href="index.php">
-        <img src="assets/logo.svg" alt="logo">
+        <img src="assets/logo.svg" alt="Logo da MoneyFive">
       </a>
       <ul>
         <li><a class="header__link" href="index.php">Home</a></li>

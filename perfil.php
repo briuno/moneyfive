@@ -34,7 +34,7 @@ $usuario = $stmt->fetch();?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,28 +43,28 @@ $usuario = $stmt->fetch();?>
 </head>
 <body>
 <?php include('inc/header.php'); ?>
-<article class="contact__container">
-    <div class="wrapper__title">
+<main class="contact__container">
+    <section class="wrapper__title">
       <h2 class="title">Editar Perfil</h2>
-    </div>
-    <div class="contact__wrapper">
-      <form action="enviar_contato.php" method="post" class="login__form">
+    </section>
+    <section class="contact__wrapper">
+      <form action="enviar_contato.php" method="post" class="login__form" aria-label="Formulário de Perfil">
         <div class="wrapper__input">
           <label for="name">Nome</label>
-          <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
+          <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required aria-required="true" aria-label="Nome Completo">
         </div>
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
+          <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required aria-required="true" aria-label="Endereço de Email">
         </div>
         <div class="wrapper__input">
           <label for="telefone">Telefone</label>
-          <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>">
+          <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>" aria-label="Telefone">
         </div>
-        <input class="contact_button" type="submit" value="Atualizar Perfil">
+        <input class="contact_button" type="submit" value="Atualizar Perfil" aria-label="Atualizar Perfil">
       </form>
-    </div>
-  </article>
+    </section>
+  </main>
 <?php include('inc/footer.php'); ?>
 </body>
 </html>

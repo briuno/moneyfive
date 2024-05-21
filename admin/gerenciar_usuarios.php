@@ -5,7 +5,7 @@ session_start();?>
 
 // Verificar autenticação e permissões...
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@ session_start();?>
 </head>
 <body>
 <?php include('../inc/adminHeader.php');?>
-<article class="admin__container">
+<main class="admin__container">
 <?php 
 echo "<h2 class='title'>Gerenciar Usuários</h2>";
 
@@ -35,7 +35,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 echo "</table>";
 ?>
-</article>
+</main>
 <?php include('../inc/adminFooter.php');?>
 </body>
 </html>

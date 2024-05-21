@@ -6,17 +6,19 @@ session_start();?>
 // Verificar autenticação e permissões...
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
-    <title>Newsletter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
+  <title>Newsletter</title>
 </head>
+
 <body>
-<?php include('../inc/adminHeader.php');?>
-<article class="admin__container">
-<?php 
+  <?php include('../inc/adminHeader.php');?>
+  <main class="admin__container">
+    <?php 
     echo "<h2 class='title'>Gerenciar Assinaturas da Newsletter</h2>";
 
     $sql = "SELECT id_assinatura, email, preferencias, status FROM AssinaturasNewsletter";
@@ -36,7 +38,8 @@ session_start();?>
     }
     echo "</table>";
 ?>
-</article>
-<?php include('../inc/adminFooter.php');?>
+  </main>
+  <?php include('../inc/adminFooter.php');?>
 </body>
+
 </html>

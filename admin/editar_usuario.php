@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,20 +43,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <article class="admin__container">
     <h2 class="title">Editar Usuário</h2>
     <div class="admin__wrapper">
-      <form method="post" class="login__form">
+      <form method="post" class="login__form" aria-label="Formulário de Usuario">
         <div class="wrapper__input">
           <label for="name">Nome</label>
-          <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
+          <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required aria-required="true" aria-label="Nome Completo">
         </div>
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
+          <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required aria-required="true" aria-label="Endereço de Email">
         </div>
         <div class="wrapper__input">
           <label for="email">Telefone</label>
-          <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>">
+          <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>" aria-label="Telefone">
         </div>
-        <input class="admin__button" type="submit" value="Salvar Alterações">
+        <input class="admin__button" type="submit" value="Salvar Alterações" aria-label="Salvar Alterações">
       </form>
     </div>
   </article>

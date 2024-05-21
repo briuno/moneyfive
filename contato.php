@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -10,29 +10,29 @@
 
 <body>
   <?php include('inc/header.php'); ?>
-  <article class="contact__container">
-    <div class="wrapper__title">
+  <main class="contact__container">
+    <section class="wrapper__title">
       <h2 class="title">Faça parte do nosso time</h2>
       <p class="subtitle">Entre em contato e receba soluções lucrativas</p>
-    </div>
-    <div class="contact__wrapper">
+    </section>
+    <section class="contact__wrapper" aria-label="Formulário de Contato">
       <form action="enviar_contato.php" method="post" class="login__form">
         <div class="wrapper__input">
           <label for="name">Nome</label>
-          <input type="text" name="name" required placeholder="Coloque seu nome" />
+          <input type="text" name="name" required placeholder="Coloque seu nome" aria-required="true" aria-label="Nome Completo" />
         </div>
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" required placeholder="Coloque seu email" />
+          <input type="email" name="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email" />
         </div>
         <div class="wrapper__input">
           <label for="message">Mensagem</label>
-          <textarea name="message"></textarea>
+          <textarea name="message" aria-label="Mensagem"></textarea>
         </div>
-        <input class="contact_button" type="submit" value="Enviar">
+        <input class="contact_button" type="submit" value="Enviar" aria-label="Enviar">
       </form>
-    </div>
-  </article>
+    </section>
+  </main>
   <?php include('inc/footer.php'); ?>
 </body>
 </html>

@@ -8,7 +8,7 @@ session_start();
 // Esta verificação dependerá da sua implementação específica de controle de acesso
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">

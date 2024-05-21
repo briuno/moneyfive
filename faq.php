@@ -1,6 +1,6 @@
 <?php include('inc/header.php');?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <title>FAQ</title>
@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <article class="faq__container">
-    <div class="wrapper__title">
+  <main class="faq__container">
+    <section class="wrapper__title">
       <h2 class="title">Perguntas feitas frequentemente</h2>
       <p class="subtitle">Algumas nem tanto</p>
-    </div>
+    </section>
     <details>
       <summary>I can change this too.</summary>
       <div class="content">

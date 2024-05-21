@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- HTML para o formulário de login -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <title>Login</title>
@@ -44,33 +44,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <article class="container">
-    <div class="wrapper">
+  <main class="container">
+    <section class="wrapper">
       <div class="wrapper__title">
-        <a href="index.php"><img src="assets/logo.svg" alt="logo"></a>
+        <a href="index.php"><img src="assets/logo.svg" alt="Logo da MoneyFive"></a>
         <div class="text__wrapper">
           <h2 class="title">Login</h2>
           <p class="subtitle">Por favor entre com suas credenciais</p>
         </div>
       </div>
-      <form method="post" class="login__form">
+      <form method="post" class="login__form" aria-label="Formulário de Login">
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" required placeholder="Coloque seu email" />
+          <input type="email" name="email" required placeholder="Coloque seu email" aria-required="true"
+            aria-label="Endereço de Email" />
         </div>
         <div class="wrapper__input">
           <label for="senha">Senha</label>
-          <input type="password" name="senha" required placeholder="Coloque sua senha" />
+          <input type="password" name="senha" required placeholder="Coloque sua senha" aria-required="true"
+            aria-label="Senha" />
         </div>
-        <input class="button" type="submit" value="Entrar">
+        <input class="button" type="submit" value="Entrar" aria-label="Entrar">
       </form>
       <p class="register">Ainda não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
-    </div>
-    <div class="wrapper__image">
+    </section>
+    <section class="wrapper__image">
       <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
-      <img class="dash__image" src="assets/home-dash.png" alt="home-dash">
-    </div>
-  </article>
+      <img class="dash__image" src="assets/home-dash.png" alt="Imagem ilustrativa de um dashboard">
+    </section>
+  </main>
   <?php if ($erro): ?>
   <p><?php echo $erro; ?></p>
   <?php endif; ?>

@@ -8,17 +8,19 @@ session_start(); ?>
 include('../inc/adminHeader.php');
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
-    <title>Solicitações</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
+  <title>Solicitações</title>
 </head>
+
 <body>
-    <?php include('../inc/adminHeader.php');?>
-    <article class="admin__container">
-<?php 
+  <?php include('../inc/adminHeader.php');?>
+  <main class="admin__container">
+    <?php 
     echo "<h2 class='title'>Gerenciar Solicitações de Consultoria</h2>";
 
     $sql = "SELECT id_solicitacao, id_usuario, descricao, status FROM SolicitacoesConsultoria";
@@ -39,7 +41,8 @@ include('../inc/adminHeader.php');
     }
     echo "</table>";
 ?>
-</article>
-<?php include('../inc/adminFooter.php');?>
+  </main>
+  <?php include('../inc/adminFooter.php');?>
 </body>
+
 </html>

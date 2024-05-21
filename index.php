@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 <body>
   <?php include('inc/header.php');?>
   <main class="main__container">
-    <div class="main__wrapper">
+    <section class="main__wrapper">
       <div class="text__wrapper">
         <h1 class="title">Bem-vindo ao <span>MoneyFive<span class="copy">©</span></span></h1>
         <p class="subtitle">Conectamos donos de pequenos e médios negócios com consultores financeiros para ajudar a tomar
@@ -20,15 +20,15 @@
           impulsionar sua tomada de decisão</p>
       </div>
       <div class="wrapper__buttons">
-        <a class="button" href="cadastro.php">Faça parte</a>
-        <a class="cadastrar" href="contato.php">Saiba mais</a>
+        <a class="button" href="cadastro.php" aria-label="Faça parte do MoneyFive">Faça parte</a>
+        <a class="cadastrar" href="contato.php" aria-label="Saiba mais sobre o MoneyFive">Saiba mais</a>
       </div>
-    </div>
-    <div class="wrapper__image">
+    </section>
+    <section class="wrapper__image">
       <p class="text__image">Faça parte do nosso time e tenha acesso a insights detalhados para você!</p>
-      <img class="main__image" src="assets/about-p2.svg" alt="home-image">
+      <img class="main__image" src="assets/about-p2.svg" alt="Imagem ilustrativa sobre consultoria financeira e dashboards">
       <p class="text__image">Seu futuro com dados estratégicos começa agora!</p>
-    </div>
+    </section>
   </main>
   <?php include('inc/footer.php'); ?>
 </body>

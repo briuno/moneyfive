@@ -30,7 +30,7 @@ $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@ $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
 <article class="admin__container">
     <h2 class="title">Alterar Status da Solicitação</h2>
     <div class="admin__wrapper">
-      <form method="post" class="login__form">
+      <form method="post" class="login__form" aria-label="Formulário de Solicitação">
         <div class="wrapper__input">
             <label for="status">Status:</label>
             <select name="status" id="status">
@@ -51,7 +51,7 @@ $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
                 <option value="concluido" <?php echo $solicitacao['status'] == 'concluido' ? 'selected' : ''; ?>>Concluído</option>
             </select>
         </div>
-        <input class="admin__button" type="submit" value="Atualizar Status">
+        <input class="admin__button" type="submit" value="Atualizar Status" aria-label="Atualizar Status">
       </form>
     </div>
   </article>

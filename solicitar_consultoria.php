@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -34,21 +34,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <?php include('inc/header.php'); ?>
-  <article class="contact__container">
+  <main class="contact__container">
     <div class="wrapper__title">
       <h2 class="title">Solicitar Consultoria</h2>
       <p class="subtitle">Diga-nos oque precisa e faremos uma consultoria especializada</p>
     </div>
     <div class="contact__wrapper">
-      <form action="enviar_contato.php" method="post" class="login__form">
+      <form action="enviar_contato.php" method="post" class="login__form" aria-label="Formulário de Consultoria">
         <div class="wrapper__input">
           <label for="message">Mensagem</label>
-          <textarea name="descricao" required></textarea><br>
+          <textarea name="descricao" required aria-required="true" aria-label="Descrição"></textarea><br>
         </div>
-        <input class="contact_button" type="submit" value="Enviar Solicitação">
+        <input class="contact_button" type="submit" value="Enviar Solicitação" aria-label="Enviar Solicitação">
       </form>
     </div>
-  </article>
+  </main>
   <?php include('inc/footer.php'); ?>
 </body>
 

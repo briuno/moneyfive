@@ -65,6 +65,11 @@ li > .header__link:hover {
   background-color: #0398e2;
 }
 
+.button > .header__link {
+  color: white;
+  text-decoration: none;
+}
+
 .cadastrar {
   padding: .7rem 2rem;
   border-radius: 6px;
