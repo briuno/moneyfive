@@ -39,18 +39,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <h2 class="title">Inscreva-se na nossa Newsletter</h2>
       <p class="subtitle">Receba as últimas notícias e atualizações diretamente no seu e-mail.</p>
     </section>
-    <section class="contact__wrapper">
+    <section class="contact__wrapper" aria-label="Formulário de Newsletter">
       <?php if ($mensagem): ?>
-      <p><?php echo $mensagem; ?></p>
+      <p><?php echo htmlspecialchars($mensagem); ?></p>
       <?php endif; ?>
-      <form method="post" class="login__form" aria-label="Formulário de Newsletter">
+      <form method="post" class="login__form">
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email" />
+          <input type="email" name="email" id="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email" />
         </div>
         <div class="wrapper__input">
           <label for="preferencias">Preferências</label>
-          <textarea name="preferencias"></textarea>
+          <textarea name="preferencias" id="preferencias" placeholder="Digite suas preferências" aria-label="Preferências"></textarea>
         </div>
         <input class="contact_button" type="submit" value="Enviar" aria-label="Enviar">
       </form>
@@ -60,3 +60,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+

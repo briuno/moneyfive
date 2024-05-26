@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute(['id_usuario' => $id_usuario, 'descricao' => $descricao]);
 
     echo "<p>Sua solicitação foi enviada com sucesso!</p>";
-}?>
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,13 +38,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <main class="contact__container">
     <div class="wrapper__title">
       <h2 class="title">Solicitar Consultoria</h2>
-      <p class="subtitle">Diga-nos oque precisa e faremos uma consultoria especializada</p>
+      <p class="subtitle">Diga-nos o que precisa e faremos uma consultoria especializada</p>
     </div>
     <div class="contact__wrapper">
-      <form action="enviar_contato.php" method="post" class="login__form" aria-label="Formulário de Consultoria">
+      <form method="post" class="login__form" aria-label="Formulário de Consultoria">
         <div class="wrapper__input">
-          <label for="message">Mensagem</label>
-          <textarea name="descricao" required aria-required="true" aria-label="Descrição"></textarea><br>
+          <label for="descricao">Mensagem</label>
+          <textarea name="descricao" id="descricao" required aria-required="true" aria-label="Descrição"></textarea><br>
         </div>
         <input class="contact_button" type="submit" value="Enviar Solicitação" aria-label="Enviar Solicitação">
       </form>

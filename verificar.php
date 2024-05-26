@@ -29,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $codigoVerificacao = rand(100000, 999999);
 
             // Enviar o código para o e-mail do usuário
-            // Note: Substitua com sua lógica de envio de e-mail
             $para = $email;
             $assunto = "Código de Verificação";
             $mensagem = "Seu código de verificação é: " . $codigoVerificacao;
@@ -50,22 +49,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
+  <title>Cadastro</title>
 </head>
+
 <body>
-    <h2>Cadastro</h2>
-    <form method="post">
-        Nome: <input type="text" name="nome" required><br>
-        E-mail: <input type="email" name="email" required><br>
-        Senha: <input type="password" name="senha" required><br>
-        Confirme a Senha: <input type="password" name="confirmacaoSenha" required><br>
-        Telefone: <input type="text" name="telefone"><br>
-        <input type="submit" value="Cadastrar">
-    </form>
-    <?php if ($erro): ?>
-        <p><?php echo $erro; ?></p>
-    <?php endif; ?>
+  <main class="container">
+    <section class="wrapper">
+      <div class="wrapper__title">
+        <a href="index.php"><img src="assets/logo.svg" alt="Logo da MoneyFive"></a>
+        <div class="text__wrapper">
+          <h2 class="title">Cadastro</h2>
+          <p class="subtitle">Preencha para obter acesso à plataforma</p>
+        </div>
+      </div>
+      <form method="post" class="login__form" aria-label="Formulário de Cadastro">
+        <div class="wrapper__input">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" required placeholder="Coloque seu nome" aria-required="true" aria-label="Nome Completo">
+        </div>
+        <div class="wrapper__input">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email">
+        </div>
+        <div class="wrapper__input">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" required placeholder="Coloque sua senha" aria-required="true" aria-label="Senha">
+        </div>
+        <div class="wrapper__input">
+          <label for="confirmacaoSenha">Confirme a Senha</label>
+          <input type="password" name="confirmacaoSenha" id="confirmacaoSenha" required placeholder="Confirme sua senha" aria-required="true" aria-label="Confirme a Senha">
+        </div>
+        <div class="wrapper__input">
+          <label for="telefone">Telefone</label>
+          <input type="text" name="telefone" id="telefone" placeholder="Telefone" aria-label="Telefone">
+        </div>
+        <input class="button" type="submit" value="Cadastrar" aria-label="Cadastrar">
+      </form>
+      <?php if ($erro): ?>
+        <p><?php echo htmlspecialchars($erro); ?></p>
+      <?php endif; ?>
+    </section>
+    <section class="wrapper__image">
+      <p>Tenha acesso a diversos dashboards para o gerenciamento de sua empresa.</p>
+      <img class="dash__image" src="assets/home-dash.png" alt="Imagem ilustrativa de um dashboard">
+    </section>
+  </main>
 </body>
+
 </html>

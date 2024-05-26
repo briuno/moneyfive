@@ -51,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,37 +58,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
   <title>Cadastro</title>
 </head>
-
 <body>
   <main class="container">
     <section class="wrapper">
       <div class="wrapper__title">
-        <a href="index.php"><img src="assets/logo.svg" alt="Logo da MoneyFive">></a>
+        <a href="index.php"><img src="assets/logo.svg" alt="Logo da MoneyFive"></a>
         <div class="text__wrapper">
           <h2 class="title">Cadastro</h2>
-          <p class="subtitle">Preencha para obter acesso a plataforma</p>
+          <p class="subtitle">Preencha para obter acesso à plataforma</p>
         </div>
       </div>
       <form method="post" class="login__form" aria-label="Formulário de Cadastro">
         <div class="wrapper__input">
           <label for="nome">Nome</label>
-          <input type="text" name="nome" required placeholder="Coloque seu nome" aria-required="true" aria-label="Nome Completo" />
+          <input type="text" name="nome" id="nome" required placeholder="Coloque seu nome" aria-required="true" aria-label="Nome Completo" />
         </div>
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email" />
+          <input type="email" name="email" id="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email" />
         </div>
         <div class="wrapper__input">
           <label for="senha">Senha</label>
-          <input type="password" name="senha" required placeholder="Coloque sua senha" aria-required="true" aria-label="Senha" />
+          <input type="password" name="senha" id="senha" required placeholder="Coloque sua senha" aria-required="true" aria-label="Senha" />
         </div>
         <div class="wrapper__input">
           <label for="confirmacaoSenha">Confirme a Senha</label>
-          <input type="password" name="confirmacaoSenha" required placeholder="Confirme sua senha" aria-required="true" aria-label="Confirme a Senha" />
+          <input type="password" name="confirmacaoSenha" id="confirmacaoSenha" required placeholder="Confirme sua senha" aria-required="true" aria-label="Confirme a Senha" />
         </div>
         <div class="wrapper__input">
           <label for="telefone">Telefone</label>
-          <input type="text" name="telefone" placeholder="Telefone" aria-label="Telefone" />
+          <input type="text" name="telefone" id="telefone" placeholder="Telefone" aria-label="Telefone" />
         </div>
         <input class="button" type="submit" value="Cadastrar" aria-label="Cadastrar">
       </form>
@@ -100,8 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
   </main>
   <?php if ($erro): ?>
-  <p><?php echo $erro; ?></p>
+  <p><?php echo htmlspecialchars($erro); ?></p>
   <?php endif; ?>
 </body>
-
 </html>

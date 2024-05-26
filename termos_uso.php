@@ -5,23 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/terms.css" media="screen" />
-  <title>Termos de uso</title>
+  <title>Termos de Uso</title>
 </head>
 
 <body>
-  <?php include('inc/header.php');?>
+  <?php include('inc/header.php'); ?>
   <main class="terms__container">
     <h2 class="title">Termos de Uso</h2>
-    <p class="subtitle">Estes termos de uso regulam o uso deste site. Ao acessá-lo, você concorda com estes termos. Se
-      você não concorda com eles, não use o site.</p>
+    <p class="subtitle">Estes termos de uso regulam o uso deste site. Ao acessá-lo, você concorda com estes termos. Se você não concorda com eles, não use o site.</p>
 
     <h3 class="info">Uso do Site</h3>
-    <p class="text">Este site pode ser usado para fins informativos. Você pode baixar conteúdo para seu uso pessoal, mas
-      qualquer outro uso sem permissão prévia é proibido.</p>
+    <p class="text">Este site pode ser usado para fins informativos. Você pode baixar conteúdo para seu uso pessoal, mas qualquer outro uso sem permissão prévia é proibido.</p>
 
     <h3 class="info">Propriedade Intelectual</h3>
-    <p class="text">O conteúdo incluído no site, como texto, gráficos, logotipos, etc., é propriedade do MoneyFive ou de
-      seus fornecedores de conteúdo e é protegido por leis de propriedade intelectual.</p>
+    <p class="text">O conteúdo incluído no site, como texto, gráficos, logotipos, etc., é propriedade do MoneyFive ou de seus fornecedores de conteúdo e é protegido por leis de propriedade intelectual.</p>
   </main>
   <?php include('inc/footer.php'); ?>
 </body>

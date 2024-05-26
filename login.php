@@ -15,13 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['email' => $email]);
     if ($stmt->rowCount() > 0) {
-        $usuario = $stmt->fetch();
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
         // Verificar a senha
         if (password_verify($senha, $usuario['senha'])) {
             // Senha correta, iniciar sessão
             session_start();
             $_SESSION['id_usuario'] = $usuario['id_usuario'];
             header("Location: dashboard.php"); // Redirecionar para a dashboard
+            exit;
         } else {
             $erro = "Senha incorreta.";
         }
@@ -56,13 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form method="post" class="login__form" aria-label="Formulário de Login">
         <div class="wrapper__input">
           <label for="email">Email</label>
-          <input type="email" name="email" required placeholder="Coloque seu email" aria-required="true"
-            aria-label="Endereço de Email" />
+          <input type="email" name="email" id="email" required placeholder="Coloque seu email" aria-required="true" aria-label="Endereço de Email" />
         </div>
         <div class="wrapper__input">
           <label for="senha">Senha</label>
-          <input type="password" name="senha" required placeholder="Coloque sua senha" aria-required="true"
-            aria-label="Senha" />
+          <input type="password" name="senha" id="senha" required placeholder="Coloque sua senha" aria-required="true" aria-label="Senha" />
         </div>
         <input class="button" type="submit" value="Entrar" aria-label="Entrar">
       </form>
@@ -74,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
   </main>
   <?php if ($erro): ?>
-  <p><?php echo $erro; ?></p>
+  <p><?php echo htmlspecialchars($erro); ?></p>
   <?php endif; ?>
 </body>
 

@@ -16,10 +16,10 @@ $id_usuario = $_SESSION['id_usuario'];
 $sql = "SELECT nome, email, is_admin FROM Usuarios WHERE id_usuario = :id_usuario";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['id_usuario' => $id_usuario]);
-$usuario = $stmt->fetch();
+$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Definições de acesso com base no papel do usuário
-$adminAccessPages = ['admin/dashboard.php', 'admin/gerenciar_usuarios.php', 'admin/gerenciar_solicitacoes.php', 'admin/gerenciar_newsletter.php'];
+$adminAccessPages = ['dashboard.php', 'gerenciar_usuarios.php', 'gerenciar_solicitacoes.php', 'gerenciar_newsletter.php'];
 $currentPage = basename($_SERVER['SCRIPT_FILENAME']);
 
 // Verificar se a página atual requer acesso de administrador e se o usuário é administrador
