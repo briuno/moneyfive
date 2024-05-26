@@ -19,36 +19,31 @@
       <details>
         <summary>Como faço para mudar minha senha?</summary>
         <div class="content">
-          <p class="question">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde?</p>
-          <p>Facilis ducimus iure officia quos possimus quaerat iusto, quas, laboriosam sapiente autem ab assumenda eligendi voluptatum nisi eius cumque, tempore reprehenderit optio placeat praesentium non sint repellendus consequuntur? Nihil, soluta.</p>
+          <p class="question">Para mudar sua senha, acesse as configurações de conta e selecione "Alterar Senha". Insira sua senha atual e, em seguida, a nova senha. Confirme a nova senha e salve as alterações.</p>
         </div>
       </details>
       <details>
         <summary>Como posso cancelar minha assinatura?</summary>
         <div class="content">
-          <p class="question">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde?</p>
-          <p>Facilis ducimus iure officia quos possimus quaerat iusto, quas, laboriosam sapiente autem ab assumenda eligendi voluptatum nisi eius cumque, tempore reprehenderit optio placeat praesentium non sint repellendus consequuntur? Nihil, soluta.</p>
+          <p class="question">Para cancelar sua assinatura, vá para a seção de assinaturas na sua conta e selecione "Cancelar Assinatura". Siga as instruções para confirmar o cancelamento.</p>
         </div>
       </details>
       <details>
         <summary>Como entro em contato com o suporte técnico?</summary>
         <div class="content">
-          <p class="question">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde?</p>
-          <p>Facilis ducimus iure officia quos possimus quaerat iusto, quas, laboriosam sapiente autem ab assumenda eligendi voluptatum nisi eius cumque, tempore reprehenderit optio placeat praesentium non sint repellendus consequuntur? Nihil, soluta.</p>
+          <p class="question">Para entrar em contato com o suporte técnico, envie um e-mail para suporte@moneyfive.com ou use o formulário de contato disponível na seção "Contato" do nosso site.</p>
         </div>
       </details>
       <details>
         <summary>Quais são os métodos de pagamento aceitos?</summary>
         <div class="content">
-          <p class="question">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde?</p>
-          <p>Facilis ducimus iure officia quos possimus quaerat iusto, quas, laboriosam sapiente autem ab assumenda eligendi voluptatum nisi eius cumque, tempore reprehenderit optio placeat praesentium non sint repellendus consequuntur? Nihil, soluta.</p>
+          <p class="question">Aceitamos os principais cartões de crédito, débito e pagamentos via PayPal. Consulte a seção de pagamentos no nosso site para mais detalhes.</p>
         </div>
       </details>
       <details>
         <summary>Posso alterar meu plano de assinatura?</summary>
         <div class="content">
-          <p class="question">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde?</p>
-          <p>Facilis ducimus iure officia quos possimus quaerat iusto, quas, laboriosam sapiente autem ab assumenda eligendi voluptatum nisi eius cumque, tempore reprehenderit optio placeat praesentium non sint repellendus consequuntur? Nihil, soluta.</p>
+          <p class="question">Sim, você pode alterar seu plano de assinatura a qualquer momento. Acesse a seção de assinaturas na sua conta e selecione "Alterar Plano". Escolha o novo plano e confirme a alteração.</p>
         </div>
       </details>
     </section>

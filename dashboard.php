@@ -1,21 +1,13 @@
 <?php
-include('config.php');
 include('auth_check.php');
+include('config.php');
 session_start();
 
-// Verificar se o usuário está logado
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
-    exit;
+// Verifique se o usuário está logado e se é um administrador
+if (!isset($_SESSION['id_usuario']) || $_SESSION['is_admin'] != 1) {
+    header('Location: ../login.php');
+    exit();
 }
-
-$id_usuario = $_SESSION['id_usuario'];
-
-// Buscar informações do usuário
-$sql = "SELECT nome, email FROM Usuarios WHERE id_usuario = :id_usuario";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['id_usuario' => $id_usuario]);
-$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -23,20 +15,25 @@ $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/dashboards.css" media="screen" />
-  <title>Dashboards</title>
+  <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
+  <title>Painel Administrativo</title>
 </head>
 <body>
-  <?php include('inc/header.php'); ?>
-  <main class="dash__container">
-    <section class="wrapper__title">
-      <h2 class="title">Dashboards</h2>
-      <p class="subtitle">Bem-vindo de volta, <span><?php echo htmlspecialchars($usuario['nome']); ?>!</span></p>
-    </section>
-    <section class="dash__wrapper">
-      <!-- Conteúdo dos dashboards pode ser adicionado aqui -->
-    </section>
-  </main>
-  <?php include('inc/footer.php'); ?>
+  <?php include('../inc/adminHeader.php'); ?>
+  <article class="admin__container">
+    <div class="wrapper__title">
+      <h2 class="title">Painel Administrativo</h2>
+      <p class="subtitle">Bem-vindo ao painel administrativo.</p>
+    </div>
+    <div class="admin__wrapper">
+      <h1 class="">Operações</h1>
+      <div class="buttons__wrapper">
+        <a class="button" href="gerenciar_usuarios.php">Gerenciar Usuários</a>
+        <a class="button" href="gerenciar_solicitacoes.php">Gerenciar Solicitações de Consultoria</a>
+        <a class="button" href="gerenciar_newsletter.php">Gerenciar Assinaturas da Newsletter</a>
+      </div>
+    </div>
+  </article>
+  <?php include('../inc/adminFooter.php'); ?>
 </body>
 </html>

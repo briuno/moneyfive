@@ -1,11 +1,14 @@
 <?php
-include('auth_check.php');
+include('../auth_check.php');
 include('../config.php');
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Verifique se o usuário está logado e se é um administrador
-if (!isset($_SESSION['user_id']) || $_SESSION['is_admin'] != 1) {
-    header('Location: ../login.php');
+if (!isset($_SESSION['id_usuario']) || $_SESSION['is_admin'] != 1) {
+    header('Location: ../unauthorized.php');
     exit();
 }
 ?>

@@ -1,13 +1,17 @@
 <?php
-include('config.php');
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include('auth_check.php');
-session_start();
+include('config.php');
 
 // Verificar se o usuário está logado
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: login.php");
     exit;
 }
+
+$id_usuario = $_SESSION['id_usuario'];
 
 // Tratar o envio do formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -38,13 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <main class="contact__container">
     <div class="wrapper__title">
       <h2 class="title">Solicitar Consultoria</h2>
-      <p class="subtitle">Diga-nos o que precisa e faremos uma consultoria especializada</p>
+      <p class="subtitle">Diga-nos oque precisa e faremos uma consultoria especializada</p>
     </div>
     <div class="contact__wrapper">
-      <form method="post" class="login__form" aria-label="Formulário de Consultoria">
+      <form action="solicitar_consultoria.php" method="post" class="login__form" aria-label="Formulário de Consultoria">
         <div class="wrapper__input">
-          <label for="descricao">Mensagem</label>
-          <textarea name="descricao" id="descricao" required aria-required="true" aria-label="Descrição"></textarea><br>
+          <label for="message">Mensagem</label>
+          <textarea name="descricao" required aria-required="true" aria-label="Descrição"></textarea><br>
         </div>
         <input class="contact_button" type="submit" value="Enviar Solicitação" aria-label="Enviar Solicitação">
       </form>
