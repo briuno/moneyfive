@@ -10,10 +10,22 @@
 
 .title {
   font-size: 3em;
-  color: #006CA9;
+  color: var(--primary);
 }
 
 .subtitle {
   font-weight: 600;
   text-align: center;
+  color: var(--text);
+}
+
+:root {
+  --primary: #006CA9;
+  --text: #464646;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--text);
 }

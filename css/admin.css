@@ -13,7 +13,7 @@
   color: #006CA9;
 }
 
-.wrapper__title > .subtitle {
+.wrapper__title .subtitle {
   font-weight: 600;
   text-align: center;
 }
@@ -37,13 +37,12 @@
   margin-top: 10px;
 }
 
-.table__wrapper > td {
+.table__wrapper td {
   padding-top: .5rem;
 }
 
 .table__wrapper:nth-child(odd) {
   background-color: #006CA930;
-
 }
 
 .table {

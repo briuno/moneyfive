@@ -34,13 +34,13 @@ ul {
   gap: 6rem;
 }
 
-li > .header__link {
+.header__link {
   text-decoration: none;
   color: #464646;
   font-size: 18px;
 }
 
-li > .header__link:hover {
+.header__link:hover {
   text-decoration: underline;
   color: #006CA9;
 }
@@ -65,7 +65,7 @@ li > .header__link:hover {
   background-color: #0398e2;
 }
 
-.button > .header__link {
+.button .header__link {
   color: white;
   text-decoration: none;
 }

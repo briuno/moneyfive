@@ -8,4 +8,36 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  color: var(--text);
+}
+
+.title {
+  color: var(--primary);
+}
+
+.subtitle {
+  color: var(--primary);
+}
+
+.text {
+  color: var(--text);
+}
+
+.button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button:hover {
+  background-color: lighten(var(--primary), 10%);
+}
+
+.cadastrar {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.cadastrar:hover {
+  border-color: lighten(var(--primary), 10%);
+  color: lighten(var(--primary), 10%);
 }

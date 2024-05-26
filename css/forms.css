@@ -41,17 +41,16 @@ body {
   gap: 10px;
 }
 
-.wrapper__title > .text__wrapper > .title {
+.text__wrapper .title {
   font-size: 2em;
   color: black;
 }
 
-
-.wrapper__title > .text__wrapper > .subtitle {
+.text__wrapper .subtitle {
   font-weight: 600;
 }
 
-.wrapper__title > a > img{
+.wrapper__title a img {
   width: auto;
   height: 100px;
 }
@@ -81,8 +80,7 @@ input:focus {
   border: 1px solid #006CA9;
 }
 
-
-.wrapper__input > label {
+.wrapper__input label {
   font-weight: 600;
   font-size: 14px;
 }
@@ -106,7 +104,7 @@ input:focus {
   font-size: 14px;
 }
 
-.register > a {
+.register a {
   text-decoration: none;
   color: #006CA9;
   font-weight: 700;
@@ -117,13 +115,12 @@ input:focus {
   flex-direction: column;
   background-color: #006CA930;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
 }
 
-.wrapper__image > p {
+.wrapper__image p {
   font-weight: 600;
   font-size: 18px;
 }

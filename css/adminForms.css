@@ -25,7 +25,7 @@
   color: #006CA9;
 }
 
-.wrapper__title > .subtitle {
+.wrapper__title .subtitle {
   font-weight: 600;
   text-align: center;
 }
@@ -44,7 +44,7 @@
   gap: 10px;
 }
 
-input {
+input, select, textarea {
   padding: .8rem;
   border-radius: 6px;
   border: 2px solid transparent;
@@ -57,30 +57,18 @@ textarea {
   height: 140px;
   padding: .3rem;
   font-size: 14px;
-  outline: none;
-  border-radius: 6px;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   border: 2px solid #006CA9;
 }
 
-
-.wrapper__input > label {
+.wrapper__input label {
   font-weight: 600;
   font-size: 14px;
 }
 
-select {
-  padding: .8rem;
-  border-radius: 6px;
-  border: 2px solid transparent;
-  outline: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-select > option {
+select option {
   font-weight: 500;
   font-size: 14px;
 }

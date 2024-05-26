@@ -22,35 +22,35 @@
   width: 70%;
 }
 
-.text__wrapper > .title {
+.text__wrapper .title {
   font-size: 3em;
   color: black;
 }
 
-.text__wrapper > .title > span {
+.text__wrapper .title span {
   color: #006CA9;
 }
 
-.text__wrapper > .title > span > .copy {
+.text__wrapper .title span .copy {
   font-size: .5em;
   position: absolute;
 }
 
-.text__wrapper > .subtitle {
+.text__wrapper .subtitle {
   font-weight: 600;
   font-size: 1.5em;
 }
 
-.text__wrapper > .text {
+.text__wrapper .text {
   font-size: 1.2em;
   font-weight: 500;
 }
 
 .wrapper__buttons {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .wrapper__image {
@@ -66,6 +66,7 @@ gap: 2rem;
 .main__image {
   height: 400px;
 }
+
 .text__image {
   font-size: 18px;
   font-weight: 600;

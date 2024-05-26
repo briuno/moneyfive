@@ -26,9 +26,11 @@ details {
   margin-top: 5px;
   background: white;
 }
+
 details summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
+
 details[open] > summary:before {
   transform: rotate(90deg);
 }
@@ -46,12 +48,12 @@ summary:before {
   transition: .25s transform ease;
 }
 
-.wrapper__title > .title {
+.wrapper__title .title {
   font-size: 3em;
   color: #006CA9;
 }
 
-.wrapper__title > .subtitle {
+.wrapper__title .subtitle {
   font-weight: 600;
   text-align: center;
 }
@@ -60,7 +62,6 @@ summary:before {
   border-top: none;
   padding: 10px;
   border: 2px solid #006CA9;
-  border-top: none;
 }
 
 p {
