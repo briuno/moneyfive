@@ -8,6 +8,15 @@
   flex: 1 1 0;
 }
 
+.faq__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+}
+
 summary {
   border: 4px solid transparent;
   outline: none;
