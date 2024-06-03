@@ -12,6 +12,8 @@ if (!isset($_SESSION['id_usuario'])) {
 }
 
 $id_usuario = $_SESSION['id_usuario'];
+$success = false;
+$error = false;
 
 // Tratar o envio do formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,9 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inserir a solicitação no banco de dados
     $sql = "INSERT INTO SolicitacoesConsultoria (id_usuario, descricao) VALUES (:id_usuario, :descricao)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['id_usuario' => $id_usuario, 'descricao' => $descricao]);
+    if($stmt->execute(['id_usuario' => $id_usuario, 'descricao' => $descricao])) {
+      $success = true;
+    } else {
+      $error = true;
+    }
 
-    echo "<p>Sua solicitação foi enviada com sucesso!</p>";
 }
 ?>
 
@@ -34,6 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/consultoria.css" media="screen" />
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <title>Solicitar Consultoria</title>
 </head>
 
@@ -55,6 +62,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </main>
   <?php include('inc/footer.php'); ?>
+
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    <?php if ($success): ?>
+      Toastify({
+        text: "Perfil atualizado com sucesso!",
+        duration: 2000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#38b000",
+      }).showToast();
+    <?php elseif ($error): ?>
+      Toastify({
+        text: "Houve um erro ao atualizar seu perfil, tente novamente mais tarde!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF0A0A"
+      }).showToast();
+    <?php endif; ?>
+  </script>
 </body>
 
 </html>

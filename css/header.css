@@ -31,7 +31,7 @@ ul {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 .header__link {
@@ -83,4 +83,14 @@ ul {
 .cadastrar:hover {
   border: 2px solid #0398e2;
   color: #0398e2;
+}
+
+@media screen and (max-width: 1536px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  ul {
+    gap: 3rem;
+  }
 }

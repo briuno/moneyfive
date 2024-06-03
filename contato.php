@@ -12,8 +12,8 @@
   <?php include('inc/header.php'); ?>
   <main class="contact__container">
     <section class="wrapper__title">
-      <h2 class="title">Faça parte do nosso time</h2>
-      <p class="subtitle">Entre em contato e receba soluções lucrativas</p>
+      <h2 class="title">Seja Nosso Parceiro</h2>
+      <p class="subtitle">Entre em contato e aproveite nossas soluções rentáveis</p>
     </section>
     <section class="contact__wrapper" aria-label="Formulário de Contato">
       <form action="enviar_contato.php" method="post" class="login__form">

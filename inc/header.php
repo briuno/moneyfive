@@ -30,7 +30,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <?php endif; ?>
       </ul>
       <?php if(isset($_SESSION['id_usuario'])): ?>
-      <div class="button"><a class="header__link" href="logout.php">Logout</a></div>
+      <a class="button" href="logout.php">Logout</a>
       <?php else: ?>
       <div class="header__buttons">
         <a class="button" href="login.php">Login</a>

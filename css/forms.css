@@ -123,10 +123,17 @@ input:focus {
 .wrapper__image p {
   font-weight: 600;
   font-size: 18px;
+  text-align: center;
 }
 
 .dash__image {
   padding: 1rem;
   width: auto;
   height: 400px;
+}
+
+@media screen and (max-width: 1536px) {
+  .dash__image {
+     height: 350px;
+  }
 }

@@ -2,8 +2,9 @@
 // Inclua o arquivo de configuração
 include('config.php');
 
-// Variável para armazenar possíveis mensagens de erro
+// Variáveis para armazenar possíveis mensagens
 $erro = '';
+$login_sucesso = false;
 
 // Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,8 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Senha correta, iniciar sessão
             session_start();
             $_SESSION['id_usuario'] = $usuario['id_usuario'];
-            header("Location: dashboard.php"); // Redirecionar para a dashboard
-            exit;
+            $login_sucesso = true;
         } else {
             $erro = "Senha incorreta.";
         }
@@ -42,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -72,9 +74,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <img class="dash__image" src="assets/home-dash.png" alt="Imagem ilustrativa de um dashboard">
     </section>
   </main>
-  <?php if ($erro): ?>
-  <p><?php echo htmlspecialchars($erro); ?></p>
-  <?php endif; ?>
+  <!-- Toastify JS -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    <?php if ($login_sucesso): ?>
+      Toastify({
+        text: "Login bem-sucedido!",
+        duration: 2000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#38b000",
+      }).showToast();
+      setTimeout(function() {
+        window.location.href = "dashboard.php";
+      }, 2000);
+    <?php elseif ($erro): ?>
+      Toastify({
+        text: "<?php echo htmlspecialchars($erro); ?>",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF0A0A"
+      }).showToast();
+    <?php endif; ?>
+  </script>
 </body>
 
 </html>
