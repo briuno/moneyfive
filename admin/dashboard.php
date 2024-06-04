@@ -6,11 +6,12 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// Verifique se o usuário está logado e se é um administrador
+// Verificar se o usuário está logado
 if (!isset($_SESSION['id_usuario']) || $_SESSION['is_admin'] != 1) {
-    header('Location: ../unauthorized.php');
-    exit();
+  header('Location: ../dashboard.php');
+  exit();
 }
+
 ?>
 
 <!DOCTYPE html>
