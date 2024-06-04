@@ -16,18 +16,25 @@ if (!isset($_SESSION['id_usuario']) || $_SESSION['is_admin'] != 1) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
   <title>Painel Administrativo</title>
 </head>
+
 <body>
   <?php include('../inc/adminHeader.php'); ?>
   <article class="admin__container">
     <div class="wrapper__title">
-      <h2 class="title">Painel Administrativo</h2>
-      <p class="subtitle">Bem-vindo ao painel administrativo.</p>
+      <div class="wrapper__text">
+        <h2 class="title">Painel Administrativo</h2>
+        <p class="subtitle">Bem-vindo ao painel administrativo.</p>
+      </div>
+      <?php if(($_SESSION['is_admin'] === 1)): ?>
+        <a class="button" href="../dashboard.php">Painel Usuário</a>
+      <?php endif; ?>
     </div>
     <div class="admin__wrapper">
       <h1 class="">Operações</h1>
@@ -40,4 +47,5 @@ if (!isset($_SESSION['id_usuario']) || $_SESSION['is_admin'] != 1) {
   </article>
   <?php include('../inc/adminFooter.php'); ?>
 </body>
+
 </html>
