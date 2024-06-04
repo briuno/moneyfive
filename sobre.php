@@ -5,7 +5,12 @@
   <title>Sobre</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MoneyFive dashboards intuitivos">
+  <meta name="keywords" content="MoneyFive, Money Five, Dashboards, Power BI, Consultoria">
+  <meta name="author" content="MoneyFive">
   <link rel="stylesheet" type="text/css" href="css/about.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/header.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/footer.css" media="screen" />
 </head>
 
 <body>
