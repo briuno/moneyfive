@@ -6,6 +6,7 @@ session_start();
 // Verificar autenticação e permissões...
 
 $id_solicitacao = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$error = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = $_POST['status'] ?? '';
@@ -22,9 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message = "Status da solicitação atualizado com sucesso!";
         } else {
             $message = "Erro ao atualizar o status da solicitação.";
+            $error = true;
         }
     } else {
         $message = "Status inválido.";
+        $error = true;
     }
 }
 
@@ -41,6 +44,7 @@ $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/adminForms.css" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Alterar Solicitações</title>
 </head>
 <body>
@@ -49,7 +53,7 @@ $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
     <h2 class="title">Alterar Status da Solicitação</h2>
     <div class="admin__wrapper">
         <?php if (isset($message)) : ?>
-            <p><?php echo htmlspecialchars($message); ?></p>
+            <strong><?php echo htmlspecialchars($message); ?></strong>
         <?php endif; ?>
         <form method="post" class="login__form" aria-label="Formulário de Solicitação">
             <div class="wrapper__input">
@@ -65,5 +69,28 @@ $solicitacao = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 </article>
 <?php include('../inc/adminFooter.php'); ?>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+    <?php if ($success): ?>
+      Toastify({
+        text: <?php echo json_encode($message); ?>,
+        duration: 2000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#38b000",
+      }).showToast();
+    <?php elseif ($error): ?>
+      Toastify({
+        text: <?php echo json_encode($message); ?>,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF0A0A"
+      }).showToast();
+    <?php endif; ?>
+  </script>
 </body>
 </html>

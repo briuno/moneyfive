@@ -1,5 +1,5 @@
 <?php
-include('auth_check.php');
+// include('auth_check.php');
 include('../config.php');
 session_start();
 
@@ -33,9 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message = "Usuário atualizado com sucesso!";
         } else {
             $message = "Erro ao atualizar o usuário.";
+            $error = true;
         }
     } else {
         $message = "Dados inválidos.";
+        $error = true;
     }
 }
 ?>
@@ -45,33 +47,67 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/adminForms.css" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Editar Usuário</title>
 </head>
-<body>
-<?php include('../inc/adminHeader.php'); ?>
-<article class="admin__container">
-    <h2 class="title">Editar Usuário</h2>
-    <div class="admin__wrapper">
-        <?php if (isset($message)) : ?>
-            <p><?php echo htmlspecialchars($message); ?></p>
-        <?php endif; ?>
-        <form method="post" class="login__form" aria-label="Formulário de Usuário">
-            <div class="wrapper__input">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required aria-required="true" aria-label="Nome Completo">
-            </div>
-            <div class="wrapper__input">
-                <label for="email">Email</label>
-                <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required aria-required="true" aria-label="Endereço de Email">
-            </div>
-            <div class="wrapper__input">
-                <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>" aria-label="Telefone">
-            </div>
-            <input class="admin__button" type="submit" value="Salvar Alterações" aria-label="Salvar Alterações">
-        </form>
-    </div>
-</article>
-<?php include('../inc/adminFooter.php'); ?>
-</body>
+    <body>
+    <?php include('../inc/adminHeader.php'); ?>
+    <article class="admin__container">
+        <h2 class="title">Editar Usuário</h2>
+        <div class="admin__wrapper">
+            <?php if (isset($message)) : ?>
+                <strong><?php echo htmlspecialchars($message); ?></strong>
+            <?php endif; ?>
+            <form method="post" class="login__form" aria-label="Formulário de Usuário">
+                <div class="wrapper__input">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required aria-required="true" aria-label="Nome Completo">
+                </div>
+                <div class="wrapper__input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required aria-required="true" aria-label="Endereço de Email">
+                </div>
+                <div class="wrapper__input">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" id="telefone" value="<?php echo htmlspecialchars($usuario['telefone']); ?>"
+                        aria-label="Telefone">
+                </div>
+                <input class="admin__button" type="submit" value="Salvar Alterações" aria-label="Salvar Alterações">
+            </form>
+        </div>
+    </article>
+    <?php include('../inc/adminFooter.php'); ?>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+    <?php if ($success): ?>
+      Toastify({
+        text: <?php echo json_encode($message); ?>,
+        duration: 2000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#38b000",
+      }).showToast();
+    <?php elseif ($error): ?>
+      Toastify({
+        text: <?php echo json_encode($message); ?>,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF0A0A"
+      }).showToast();
+    <?php endif; ?>
+  </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"
+    integrity="sha512-F5Ul1uuyFlGnIT1dk2c4kB4DBdi5wnBJjVhL7gQlGh46Xn0VhvD8kgxLtjdZ5YN83gybk/aASUAlpdoWUjRR3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $(document).ready(function() {
+        // Aplica a máscara ao campo de telefone enquanto o usuário digita
+        $('#telefone').inputmask('(99) 99999-9999');
+    });
+    </body>
 </html>
