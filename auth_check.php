@@ -37,14 +37,15 @@ if (!$usuario) {
 }
 
 // Definições de acesso com base no papel do usuário
-$adminAccessPages = ['dashboard.php', 'gerenciar_usuarios.php', 'gerenciar_solicitacoes.php', 'gerenciar_newsletter.php'];
+$adminAccessPages = ['dashboard.php', 'gerenciar_usuarios.php', 
+'gerenciar_solicitacoes.php', 'gerenciar_newsletter.php'];
 $currentPage = basename($_SERVER['SCRIPT_FILENAME']);
 
-// // Verificar se a página atual requer acesso de administrador e se o usuário é administrador
-// if (in_array($currentPage, $adminAccessPages) && !$usuario['is_admin']) {
-//     header("Location: unauthorized.php");
-//     exit;
-// }
+// Verificar se a página atual requer acesso de administrador e se o usuário é administrador
+if (in_array($currentPage, $adminAccessPages) && !$usuario['is_admin']) {
+    header("Location: unauthorized.php");
+    exit;
+}
 
 // Armazenar informações do usuário na sessão para uso posterior nas páginas
 $_SESSION['user_name'] = $usuario['nome'];

@@ -8,9 +8,13 @@
   <meta name="keywords" content="MoneyFive, Money Five, Dashboards, Power BI, Consultoria">
   <meta name="author" content="MoneyFive">
   <link rel="stylesheet" type="text/css" href="css/home.css" media="screen" />
+<<<<<<< Updated upstream
   <link rel="stylesheet" type="text/css" href="css/header.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/footer.css" media="screen" />
   <title>Money Five - Home</title>
+=======
+  <title>MoneyFive</title>
+>>>>>>> Stashed changes
 </head>
 
 <body>
