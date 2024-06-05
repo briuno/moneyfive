@@ -7,7 +7,7 @@
   <meta name="description" content="MoneyFive dashboards intuitivos">
   <meta name="keywords" content="MoneyFive, Money Five, Dashboards, Power BI, Consultoria">
   <meta name="author" content="MoneyFive">
-  <link rel="shortcut icon" href="assets/favicon.ico"/>
+  <link rel="shortcut icon" href="assets/Favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/home.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/header.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/footer.css" media="screen" />
@@ -23,7 +23,7 @@
         <p class="subtitle">Conectamos donos de pequenos e médios negócios com consultores financeiros para ajudar a tomar decisões informadas.</p>
         <p class="text">Explore nossos Dashboards: Uma coleção diversificada de insights poderosos e visuais impactantes para impulsionar sua tomada de decisão.</p>
       </div>
-      <div class="wrapper__buttons">0
+      <div class="wrapper__buttons">
         <a class="button" href="cadastro.php" aria-label="Faça parte do MoneyFive">Faça parte</a>
         <a class="cadastrar" href="contato.php" aria-label="Saiba mais sobre o MoneyFive">Saiba mais</a>
       </div>

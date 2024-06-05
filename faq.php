@@ -7,6 +7,7 @@
   <meta name="description" content="MoneyFive dashboards intuitivos">
   <meta name="keywords" content="MoneyFive, Money Five, Dashboards, Power BI, Consultoria">
   <meta name="author" content="MoneyFive">
+  <link rel="shortcut icon" href="assets/Favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/faq.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/header.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/footer.css" media="screen" />

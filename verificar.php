@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/Favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
   <title>Cadastro</title>

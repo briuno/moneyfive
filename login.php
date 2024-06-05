@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="description" content="MoneyFive dashboards intuitivos">
   <meta name="keywords" content="MoneyFive, Money Five, Dashboards, Power BI, Consultoria">
   <meta name="author" content="MoneyFive">
+  <link rel="shortcut icon" href="assets/Favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/forms.css" media="screen" />
   <!-- Toastify CSS -->
