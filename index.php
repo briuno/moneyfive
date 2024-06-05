@@ -8,13 +8,10 @@
   <meta name="keywords" content="MoneyFive, Money Five, Dashboards, Power BI, Consultoria">
   <meta name="author" content="MoneyFive">
   <link rel="stylesheet" type="text/css" href="css/home.css" media="screen" />
-<<<<<<< Updated upstream
   <link rel="stylesheet" type="text/css" href="css/header.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/footer.css" media="screen" />
-  <title>Money Five - Home</title>
-=======
-  <title>MoneyFive</title>
->>>>>>> Stashed changes
+  <title>MoneyFive - Soluções de BI para Pequenos e Médios Negócios</title>
+  <meta name="description" content="A MoneyFive oferece dashboards, relatórios e previsões personalizados para ajudar pequenos e médios negócios a crescer. Saiba mais sobre nossas soluções de BI.">
 </head>
 
 <body>
