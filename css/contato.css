@@ -82,3 +82,19 @@ input:focus, textarea:focus {
 .contact_button:hover {
   background-color: #0398e2;
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper__title .title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .login__form {
+    width: 100%;
+  }
+
+  .contact__wrapper {
+    width: 370px;
+    height: 500px;
+  }
+}

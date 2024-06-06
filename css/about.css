@@ -44,3 +44,23 @@
 .dash__image {
   height: 250px;
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper__title .title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .text {
+    width: 80%;
+  }
+
+  .wrapper__image, .wrapper__image-rtl {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  .dash__image {
+    height: 200px;
+  }
+}

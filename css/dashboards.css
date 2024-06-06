@@ -68,3 +68,10 @@
     gap: 2rem;
   }
 }
+
+@media screen and (max-width: 640px) {
+  iframe {
+    width: 360px;
+    height: 450px;
+  }
+}

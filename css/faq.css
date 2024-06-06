@@ -87,3 +87,14 @@ p.question {
 p:last-child {
   padding: 0;
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper__title .title {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  details {
+    width: 100%;
+  }
+}

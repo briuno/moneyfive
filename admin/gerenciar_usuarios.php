@@ -1,5 +1,5 @@
 <?php
-include('auth_check.php');
+include('../auth_check.php');
 include('../config.php');
 session_start();
 
@@ -12,30 +12,32 @@ if ($_SESSION['is_admin'] != 1) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/Favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/header.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/footer.css" media="screen" />
-    <title>Gerenciar Usuários</title>
-</head>
-<body>
-<?php include('../inc/adminHeader.php'); ?>
-<main class="admin__container">
-    <h2 class="title">Gerenciar Usuários</h2>
 
-    <?php
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/Favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/header.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/footer.css" media="screen" />
+  <title>Gerenciar Usuários</title>
+</head>
+
+<body>
+  <?php include('../inc/adminHeader.php'); ?>
+  <main class="admin__container">
+    <h2 class="title">Gerenciar Usuários</h2>
+    <div class="table__container">
+      <?php
     $sql = "SELECT id_usuario, nome, email FROM Usuarios";
     $stmt = $pdo->query($sql);
 
     echo "<table class='table'>
-            <tr>
-                <th class='name'>ID</th>
-                <th class='name'>Nome</th>
-                <th class='name'>Email</th>
-                <th class='name'>Ações</th>
+            <tr class='name'>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
             </tr>";
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -51,7 +53,10 @@ if ($_SESSION['is_admin'] != 1) {
     }
     echo "</table>";
     ?>
-</main>
-<?php include('../inc/adminFooter.php'); ?>
+
+    </div>
+  </main>
+  <?php include('../inc/adminFooter.php'); ?>
 </body>
+
 </html>

@@ -87,3 +87,19 @@ select option {
 .admin__button:hover {
   background-color: #0398e2;
 }
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .login__form {
+    width: 100%;
+  }
+
+  .admin__wrapper {
+    width: 370px;
+    height: 500px;
+  }
+}

@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <header class="container">
   <nav class="wrapper" aria-label="Menu Principal">
     <a class="image" href="../index.php">
-      <img src="../assets/logo.svg" alt="Logo da MoneyFive">
+      <img src="../assets/logo.svg" alt="MoneyFive">
     </a>
     <ul>
       <li><a class="header__link" href="../admin/dashboard.php">Dashboard</a></li>

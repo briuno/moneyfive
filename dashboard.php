@@ -36,7 +36,7 @@ $usuario = $stmt->fetch();
         <h2 class="title">Dashboards</h2>
         <p class="subtitle">Bem-vindo de volta, <span><?php echo htmlspecialchars($usuario['nome']); ?>!</span></p>
       </div>
-      <?php if(($_SESSION['is_admin'] === 1)): ?>
+      <?php if((isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 1)): ?>
       <a class="button" href="admin/dashboard.php">Painel Administrativo</a>
       <?php endif; ?>
     </section>
