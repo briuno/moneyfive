@@ -137,3 +137,29 @@ input:focus {
      height: 350px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding-left: 0;
+    background-color: #006CA930;
+  }
+  
+  .wrapper {
+    width: max-content;
+  }
+  .wrapper__image {
+    display: none;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+  
+  .register {
+    padding-top: 1rem;
+  }
+}

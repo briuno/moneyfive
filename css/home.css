@@ -73,3 +73,15 @@
   color: #006CA9;
   text-align: center;
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper__image {
+    display: none;
+  }
+
+  .text__wrapper {
+    width: 100%;
+    text-align: center;
+  }
+}
+

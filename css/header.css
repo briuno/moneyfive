@@ -94,3 +94,21 @@ ul {
     gap: 3rem;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .image {
+   display: none;
+  }
+
+  ul {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

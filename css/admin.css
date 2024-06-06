@@ -41,6 +41,11 @@
   gap: 2rem;
 }
 
+.table__container {
+  width: 100%;
+  overflow-x: auto;
+}
+
 .table__wrapper {
   margin-top: 10px;
 }
@@ -99,4 +104,36 @@
 
 .remove:hover {
   background-color: #ff4d6d;
+}
+
+@media screen and (max-width: 640px) {
+  .admin__container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .table__wrapper td {
+    padding-bottom: .5rem;
+    white-space: nowrap;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .buttons {
+    padding: 0 .5rem 0 .5rem;
+  }
+
+  .buttons__wrapper {
+    flex-direction: column;
+  }
+
+  .edit {
+    width: max-content;
+  }
 }

@@ -1,5 +1,5 @@
 <?php
-include('auth_check.php');
+include('../auth_check.php');
 include('../config.php');
 session_start();
 
@@ -12,31 +12,33 @@ if ($_SESSION['is_admin'] != 1) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/Favicon.ico"/>
+  <link rel="shortcut icon" href="assets/Favicon.ico" />
   <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="../css/header.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="../css/footer.css" media="screen" />
   <title>Gerenciar Solicitações de Consultoria</title>
 </head>
+
 <body>
   <?php include('../inc/adminHeader.php'); ?>
   <main class="admin__container">
     <h2 class='title'>Gerenciar Solicitações de Consultoria</h2>
-
-    <?php
+    <div class="table__container">
+      <?php
     $sql = "SELECT id_solicitacao, id_usuario, descricao, status FROM SolicitacoesConsultoria";
     $stmt = $pdo->query($sql);
 
     echo "<table class='table'>
             <tr class='name'>
               <th>ID</th>
-              <th class='name'>ID Usuário</th>
-              <th class='name'>Descrição</th>
-              <th class='name'>Status</th>
-              <th class='name'>Ações</th>
+              <th>ID Usuário</th>
+              <th>Descrição</th>
+              <th>Status</th>
+              <th>Ações</th>
             </tr>";
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -53,7 +55,9 @@ if ($_SESSION['is_admin'] != 1) {
     }
     echo "</table>";
     ?>
+    </div>
   </main>
   <?php include('../inc/adminFooter.php'); ?>
 </body>
+
 </html>

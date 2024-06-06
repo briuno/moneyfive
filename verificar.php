@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <main class="container">
     <section class="wrapper">
       <div class="wrapper__title">
-        <a href="index.php"><img src="assets/logo.svg" alt="Logo da MoneyFive"></a>
+        <a href="index.php"><img src="assets/logo.svg" alt="MoneyFive"></a>
         <div class="text__wrapper">
           <h2 class="title">Cadastro</h2>
           <p class="subtitle">Preencha para obter acesso à plataforma</p>
