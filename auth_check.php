@@ -42,10 +42,10 @@ $adminAccessPages = ['dashboard.php', 'gerenciar_usuarios.php',
 $currentPage = basename($_SERVER['SCRIPT_FILENAME']);
 
 // Verificar se a página atual requer acesso de administrador e se o usuário é administrador
-if (in_array($currentPage, $adminAccessPages) && !$usuario['is_admin']) {
-    header("Location: unauthorized.php");
-    exit;
-}
+// if (in_array($currentPage, $adminAccessPages) && !$usuario['is_admin']) {
+//     header("Location: unauthorized.php");
+//     exit;
+// }
 
 // Armazenar informações do usuário na sessão para uso posterior nas páginas
 $_SESSION['user_name'] = $usuario['nome'];

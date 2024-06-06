@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-// include('auth_check.php');
+include('auth_check.php');
 include('config.php');
 
 $id_usuario = $_SESSION['id_usuario'];

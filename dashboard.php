@@ -1,6 +1,6 @@
 <?php
 include('config.php');
-// include('auth_check.php');
+include('auth_check.php');
 session_start();
 
 $id_usuario = $_SESSION['id_usuario'];
